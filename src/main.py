@@ -13,6 +13,8 @@ from src.inventory.router import (
     assignments_router,
 )
 
+from src.agent.router import agent_router
+
 from src.utils import GetFlightsData
 
 app = FastAPI(
@@ -25,6 +27,7 @@ app.include_router(products_router)
 app.include_router(lotes_router)
 app.include_router(lot_items_router)
 app.include_router(assignments_router)
+app.include_router(agent_router)
 
 
 @app.get("/", tags=["root"])
