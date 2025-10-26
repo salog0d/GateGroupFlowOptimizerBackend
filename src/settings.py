@@ -19,6 +19,8 @@ class Settings(BaseSettings):
 
     database_url_async_env: Optional[str] = Field(None, alias="DATABASE_URL_ASYNC")
     database_url_sync_env: Optional[str] = Field(None, alias="DATABASE_URL_SYNC")
+    aviation_edge_api: str = Field(..., alias="AVIATION_EDGE_API")
+    future_flights_url: str = Field(..., alias="FUTURE_FLIGHTS_URL")
 
     @computed_field
     @property
